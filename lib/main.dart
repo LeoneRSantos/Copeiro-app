@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'modelos/lista_de_partidas.dart';
+import 'modelos/modelo_lista_de_partidas.dart';
 import 'repositorio/repositorio_de_lista_de_partida.dart';
 
 void main() {
