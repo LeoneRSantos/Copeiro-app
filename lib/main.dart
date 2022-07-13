@@ -1,3 +1,4 @@
+import 'package:copeiro_app/widgets/card_time.dart';
 import 'package:flutter/material.dart';
 
 import 'modelos/lista_de_partidas.dart';
