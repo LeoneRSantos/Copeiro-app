@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 
-import '../modelos/lista_de_partidas.dart';
+import '../modelos/modelo_lista_de_partidas.dart';
 
 abstract class Repositorio<T> {
   Future<List<T>> getAll();
