@@ -1,8 +1,11 @@
+
 import 'package:copeiro_app/widgets/card_time.dart';
 import 'package:flutter/material.dart';
 
 import 'modelos/modelo_lista_de_partidas.dart';
+import 'modelos/modelo_times.dart';
 import 'repositorio/repositorio_de_lista_de_partida.dart';
+import 'repositorio/repositorio_times.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,23 +38,23 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    RepositorioListaDePartida r = RepositorioListaDePartida();
+    RepositorioTimesBrasileiro r = RepositorioTimesBrasileiro();
     return Scaffold(
       body: SafeArea(
         child: FutureBuilder(
-          future: r.getAll(),
+          future: r.getAllTImes(),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              var users = snapshot.data as List<PartidaUnica>;
+              var users = snapshot.data as List<Data>;
 
               return ListView.builder(
                 itemCount: users.length,
                 itemBuilder: (_, index) {
-                  PartidaUnica fato = users[index];
+                  Data fato = users[index];
                   return ListTile(
                     leading: const Icon(Icons.adb),
                     title:
-                        Text('${fato.homeTeam?.name}X ${fato.awayTeam?.name}'),
+                        Text('${fato.name}X ${fato.shortCode}'),
                   );
                 },
               );
