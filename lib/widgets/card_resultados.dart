@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CardResultados extends StatelessWidget {
-  const CardResultados({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
+  CardResultados({Key? key}) : super(key: key); 
 
   // Escudos teste
 
@@ -26,6 +23,28 @@ class CardResultados extends StatelessWidget {
   List<String> golsDosMandantes = ["2", "1",];
 
   List<String> golsDosVisitantes = ["1", "0"];
-    return Container();
+
+  @override
+  Widget build(BuildContext context) {
+
+    ColorScheme cores = Theme.of(context).colorScheme;
+    
+    return SafeArea( 
+      child: Scaffold( 
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column( 
+            children: [ 
+
+              Expanded( 
+                child: Container( 
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.0), 
+                  border: Border.all(color: cores.onPrimary, width: 5.0)),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ));
   }
 }
