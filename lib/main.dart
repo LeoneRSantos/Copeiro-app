@@ -44,6 +44,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+     ColorScheme esquemaDeCores = Theme.of(context).colorScheme;
     RepositorioTimesBrasileiro r = RepositorioTimesBrasileiro();
     return Scaffold(
       body: SafeArea(
