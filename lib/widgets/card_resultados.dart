@@ -70,6 +70,9 @@ class CardUmResultado extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    ColorScheme cores = Theme.of(context).colorScheme; 
+
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Column(
@@ -80,9 +83,9 @@ class CardUmResultado extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [ 
               Image.network(escudoMandante, scale: 7.0,),
-              Text(nomeMandante, style: TextStyle(fontSize: 20.0),), 
+              Text(nomeMandante, style: TextStyle(fontSize: 20.0, color: cores.primary),), 
               Spacer(),
-              Text(golsMandante, style: TextStyle(fontSize: 20.0),),
+              Text(golsMandante, style: TextStyle(fontSize: 20.0, color: cores.primary),),
             ],
           ), 
 
@@ -92,9 +95,9 @@ class CardUmResultado extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [ 
               Image.network(escudoVisitante, scale: 7.0,),
-              Text(nomeVisitante, style: TextStyle(fontSize: 20.0),), 
+              Text(nomeVisitante, style: TextStyle(fontSize: 20.0, color: cores.primary),), 
               Spacer(),
-              Text(golsVisitante, style: TextStyle(fontSize: 20.0),),
+              Text(golsVisitante, style: TextStyle(fontSize: 20.0, color: cores.primary),),
             ],
           ), 
 
