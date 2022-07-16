@@ -1,6 +1,8 @@
 
 import 'package:copeiro_app/controllers/tema_cubit.dart';
 import 'package:copeiro_app/widgets/card_time.dart';
+import 'package:copeiro_app/widgets/switch_telas.dart';
+import 'package:copeiro_app/widgets/text_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -47,6 +49,18 @@ class _MyHomePageState extends State<MyHomePage> {
      ColorScheme esquemaDeCores = Theme.of(context).colorScheme;
     RepositorioTimesBrasileiro r = RepositorioTimesBrasileiro();
     return Scaffold(
+      appBar:  AppBar(
+        toolbarHeight: 100, // Set this height
+        flexibleSpace: Column(
+          children: const [
+          TextTile(liga: 'Brasil'),
+          ],
+
+        ),
+        // backgroundColor: esquemaDeCores.background,
+        actions: const [
+         SwitchTelas(),
+        ],),
       body: SafeArea(
         child: FutureBuilder(
           future: r.getAllTImes(),
@@ -61,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   return ListTile(
                     leading: const Icon(Icons.adb),
                     title:
-                        Text('${fato.name}X ${fato.shortCode}'),
+                        CardTime(time: '${fato.name}', escudo: '${fato.shortCode}'),
                   );
                 },
               );
