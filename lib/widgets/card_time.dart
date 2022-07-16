@@ -7,15 +7,14 @@ class CardTime extends StatelessWidget{
 
   Widget build(BuildContext context){
     return Container(
-      color: Colors.blue[200],
       padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 8),
-      margin: const EdgeInsets.symmetric(vertical: 2),
+      margin: const EdgeInsets.symmetric(vertical: 0.01),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(time!, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),),
-          Image.network(escudo!, width: 60, height: 60,),
+          Text(time!, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w900),),
+          Image.network(escudo!, width: 48, height: 48,),
         ],
       ),
     );
