@@ -1,6 +1,10 @@
 
+import 'package:copeiro_app/controllers/tema_cubit.dart';
 import 'package:copeiro_app/widgets/card_time.dart';
+import 'package:copeiro_app/widgets/switch_telas.dart';
+import 'package:copeiro_app/widgets/text_tile.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'modelos/modelo_lista_de_partidas.dart';
 import 'modelos/modelo_times.dart';
@@ -17,13 +21,17 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    return BlocProvider<TemaCubit>(create: (_) => TemaCubit(),
+    child: BlocBuilder<TemaCubit, ThemeData>(builder: (context, state) {
+
     return MaterialApp(
+
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      debugShowCheckedModeBanner: false,
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      theme: state,
     );
+    },), );
   }
 }
 
@@ -38,8 +46,21 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+     ColorScheme esquemaDeCores = Theme.of(context).colorScheme;
     RepositorioTimesBrasileiro r = RepositorioTimesBrasileiro();
     return Scaffold(
+      appBar:  AppBar(
+        toolbarHeight: 100, // Set this height
+        flexibleSpace: Column(
+          children: const [
+          TextTile(liga: 'Brasil'),
+          ],
+
+        ),
+        // backgroundColor: esquemaDeCores.background,
+        actions: const [
+         SwitchTelas(),
+        ],),
       body: SafeArea(
         child: FutureBuilder(
           future: r.getAllTImes(),
@@ -54,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   return ListTile(
                     leading: const Icon(Icons.adb),
                     title:
-                        Text('${fato.name}X ${fato.shortCode}'),
+                        CardTime(time: '${fato.name}', escudo: '${fato.shortCode}'),
                   );
                 },
               );
