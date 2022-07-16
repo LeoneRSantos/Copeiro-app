@@ -29,21 +29,21 @@ class ListaDePartidas {
 class Query {
   String? apikey;
   String? seasonId;
-  String? dateFrom;
+  String? dateTo;
 
-  Query({this.apikey, this.seasonId, this.dateFrom});
+  Query({this.apikey, this.seasonId, this.dateTo});
 
   Query.fromJson(Map<String, dynamic> json) {
     apikey = json['apikey'];
     seasonId = json['season_id'];
-    dateFrom = json['date_from'];
+    dateTo = json['date_to'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['apikey'] = this.apikey;
     data['season_id'] = this.seasonId;
-    data['date_from'] = this.dateFrom;
+    data['date_to'] = this.dateTo;
     return data;
   }
 }
@@ -54,13 +54,13 @@ class PartidaUnica {
   String? status;
   String? matchStart;
   String? matchStartIso;
-  Null? minute;
+  int? minute;
   int? leagueId;
   int? seasonId;
   Stage? stage;
   Group? group;
   Round? round;
-  Null? refereeId;
+  int? refereeId;
   HomeTeam? homeTeam;
   HomeTeam? awayTeam;
   Stats? stats;
@@ -184,7 +184,7 @@ class Group {
 class Round {
   int? roundId;
   String? name;
-  Null? isCurrent;
+  int? isCurrent;
 
   Round({this.roundId, this.name, this.isCurrent});
 
@@ -271,8 +271,8 @@ class Country {
 class Stats {
   int? homeScore;
   int? awayScore;
-  Null? htScore;
-  Null? ftScore;
+  String? htScore;
+  String? ftScore;
   Null? etScore;
   Null? psScore;
 
