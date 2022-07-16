@@ -40,6 +40,21 @@ class CardResultados extends StatelessWidget {
                 child: Container( 
                   decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.0), 
                   border: Border.all(color: cores.onPrimary, width: 5.0)),
+
+                  child: ListView.separated(
+                    itemBuilder: (BuildContext context, int index) {  
+
+                    return CardUmResultado( 
+                      escudoMandante: testeEscudo[index],  
+                      nomeMandante: nomesDosMandantes[index],  
+                      golsMandante: golsDosMandantes[index],  
+                      escudoVisitante: testeEscudo[index],  
+                      nomeVisitante: nomesDosVisitantes[index], 
+                      golsVisitante: golsDosVisitantes[index], 
+                    
+                    );
+                    }, itemCount: nomesDosMandantes.length, separatorBuilder: (BuildContext context, int index) => Divider(color: cores.onBackground), 
+                  ),
                 ),
               ),
             ],
