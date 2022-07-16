@@ -48,3 +48,59 @@ class CardResultados extends StatelessWidget {
       ));
   }
 }
+
+
+class CardUmResultado extends StatelessWidget {
+  
+  CardUmResultado({Key? key, 
+  required this.escudoMandante, 
+  required this.nomeMandante, 
+  required this.golsMandante, 
+  required this.escudoVisitante, 
+  required this.nomeVisitante, 
+  required this.golsVisitante}) : super(key: key);
+
+  final String escudoMandante;
+  final String nomeMandante;
+  final String golsMandante;
+
+  final String escudoVisitante;
+  final String nomeVisitante;
+  final String golsVisitante;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Column(
+        children: [ 
+
+          // Time 1
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [ 
+              Image.network(escudoMandante, scale: 7.0,),
+              Text(nomeMandante, style: TextStyle(fontSize: 20.0),), 
+              Spacer(),
+              Text(golsMandante, style: TextStyle(fontSize: 20.0),),
+            ],
+          ), 
+
+
+          // Time 2
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [ 
+              Image.network(escudoVisitante, scale: 7.0,),
+              Text(nomeVisitante, style: TextStyle(fontSize: 20.0),), 
+              Spacer(),
+              Text(golsVisitante, style: TextStyle(fontSize: 20.0),),
+            ],
+          ), 
+
+          // Divider(color: Theme.of(context).colorScheme.onBackground,),
+        ],
+      ),
+    );
+  }
+}
