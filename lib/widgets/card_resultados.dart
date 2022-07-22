@@ -96,10 +96,17 @@ class CardUmResultado extends StatelessWidget {
           // Time 1
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: [ 
-              Image.network(escudoMandante, scale: 7.0,),
-              Text(nomeMandante, style: TextStyle(fontSize: 20.0, color: cores.primary),), 
+            
+            children: [
+               
+              SizedBox(child: Image.network(escudoMandante),
+              width: 50.0,
+              height: 50.0,),
+              
+              Text(nomeMandante, style: TextStyle(fontSize: 20.0, color: cores.primary),),
+               
               Spacer(),
+              
               Text(golsMandante, style: TextStyle(fontSize: 20.0, color: cores.primary),),
             ],
           ), 
@@ -108,10 +115,17 @@ class CardUmResultado extends StatelessWidget {
           // Time 2
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: [ 
-              Image.network(escudoVisitante, scale: 7.0,),
-              Text(nomeVisitante, style: TextStyle(fontSize: 20.0, color: cores.primary),), 
+            
+            children: [
+               
+              SizedBox(child: Image.network(escudoVisitante),
+              width: 50.0,
+              height: 50.0,),
+              
+              Text(nomeVisitante, style: TextStyle(fontSize: 20.0, color: cores.primary),),
+               
               Spacer(),
+              
               Text(golsVisitante, style: TextStyle(fontSize: 20.0, color: cores.primary),),
             ],
           ), 
