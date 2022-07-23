@@ -10,29 +10,29 @@ import 'package:copeiro_app/ui/widgets/text_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class Brasil extends StatelessWidget {
-  const Brasil({Key? key}) : super(key: key);
+class Espanha extends StatelessWidget {
+  const Espanha({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return BlocProvider<TemaCubit>(create: (_) => TemaCubit(),
     child: BlocBuilder<TemaCubit, ThemeData>(builder: (context, state) {
 
     return MaterialApp(
-      home:  MyBrasilPage(),
+      home:  MyEspanhalPage(),
       theme: state,
     );
     },), );
   }
 }
 
-class MyBrasilPage extends StatefulWidget {
-  const MyBrasilPage({Key? key}) : super(key: key);
+class MyEspanhalPage extends StatefulWidget {
+  const MyEspanhalPage({Key? key}) : super(key: key);
 
   @override
-  State<MyBrasilPage> createState() => _MyBrasilPageState ();
+  State<MyEspanhalPage> createState() => _MyEspanhalPageState ();
 }
 
-class _MyBrasilPageState extends State<MyBrasilPage> with TickerProviderStateMixin {
+class _MyEspanhalPageState extends State<MyEspanhalPage> with TickerProviderStateMixin {
   late TabController _tabController;
 
   @override
@@ -50,7 +50,7 @@ class _MyBrasilPageState extends State<MyBrasilPage> with TickerProviderStateMix
       backgroundColor: esquemaDeCores.background,
       appBar:  AppBar(
         title: 
-          TextTile(liga: 'Brasil'),
+          TextTile(liga: 'Espanha'),
           bottom: TabBar(
           controller: _tabController,
           indicatorColor: esquemaDeCores.onSurface,
