@@ -1,8 +1,8 @@
 
 import 'package:copeiro_app/controllers/tema_cubit.dart';
-import 'package:copeiro_app/widgets/card_time.dart';
-import 'package:copeiro_app/widgets/switch_telas.dart';
-import 'package:copeiro_app/widgets/text_tile.dart';
+import 'package:copeiro_app/ui/widgets/card_time.dart';
+import 'package:copeiro_app/ui/widgets/switch_telas.dart';
+import 'package:copeiro_app/ui/widgets/text_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
