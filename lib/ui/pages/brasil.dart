@@ -10,36 +10,30 @@ import 'package:copeiro_app/ui/widgets/text_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
+class Brasil extends StatelessWidget {
+  const Brasil({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return BlocProvider<TemaCubit>(create: (_) => TemaCubit(),
     child: BlocBuilder<TemaCubit, ThemeData>(builder: (context, state) {
 
     return MaterialApp(
-
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyBrasilPage(title: 'Flutter Demo Home Page'),
       theme: state,
     );
     },), );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+class MyBrasilPage extends StatefulWidget {
+  const MyBrasilPage({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState ();
+  State<MyBrasilPage> createState() => _MyBrasilPageState ();
 }
 
-class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
-
+class _MyBrasilPageState extends State<MyBrasilPage> with TickerProviderStateMixin {
   late TabController _tabController;
 
   @override
@@ -51,7 +45,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     ColorScheme esquemaDeCores = Theme.of(context).colorScheme;
-    // RepositorioListaDePartida r = RepositorioListaDePartida();
     RepositorioTimesBrasileiro r = RepositorioTimesBrasileiro();
     RepositorioListaDePartida d = RepositorioListaDePartida();
     return Scaffold(
@@ -70,16 +63,11 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
             Tab(
               icon: Icon(Icons.data_thresholding_outlined),
               text: 'Resultados',
-            ),
-          ],
-        ),
-        // backgroundColor: esquemaDeCores.background,
+            ),],),
         actions: const [
          SwitchTelas(),
         ],),
-      // appBar: AppBar(title: Text('bola')),
       body: SafeArea(
-        
         child: TabBarView(
         controller: _tabController,
         children: <Widget>[
@@ -87,7 +75,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
           child:  FutureBuilder(
           future: r.getAllTImes(),
           builder: (context, snapshot) {
-            
             if (snapshot.hasData) {
               var users = snapshot.data as List<Data>;
 
@@ -97,25 +84,16 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   Data fato = users[index];
                   return ListTile(
                     // leading: const Icon(Icons.adb),
-                    title: CardTime( escudo: '${fato.logo}', time: '${fato.name}',),
-                        // Text('${fato.name}X ${fato.shortCode}'),
-                  );
-                },
-              );
-            }
+                    title: CardTime( escudo: '${fato.logo}', time: '${fato.name}',),);
+                },);}
             return const Center(
               child: CircularProgressIndicator(
-                color: Colors.red,
-              ),
-            );
-          },
-        ),
-          ),
+                color: Colors.red,),
+            );},),),
           Center(
             child:  FutureBuilder(
           future: d.getAll(),
           builder: (context, snapshot) {
-            
             if (snapshot.hasData) {
               var users = snapshot.data as List<PartidaUnica>;
 
@@ -124,27 +102,16 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                 itemBuilder: (_, index) {
                   PartidaUnica fato = users[index];
                   return ListTile(
-                    // leading: const Icon(Icons.adb),
                     title: CardUmResultado( escudoMandante: fato.homeTeam?.logo,
                           nomeMandante: fato.homeTeam?.name, golsMandante: fato.stats?.homeScore, 
                           escudoVisitante: fato.awayTeam?.logo, nomeVisitante: 
                           fato.awayTeam?.name, golsVisitante: fato.stats?.awayScore),
-                        // Text('${fato.name}X ${fato.shortCode}'),
-                  );
-                },
-              );
+                  );},);
             }
             return const Center(
               child: CircularProgressIndicator(
                 color: Colors.red,
-              ),
-            );
-          },
-        ),
-          ),
-        ],
-      ),
-      ),
+              ),);},),),],),),
     );
   }
 }

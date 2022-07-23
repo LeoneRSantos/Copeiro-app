@@ -6,17 +6,30 @@ class CardTime extends StatelessWidget{
   final String? escudo;
 
   Widget build(BuildContext context){
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 8),
-      margin: const EdgeInsets.symmetric(vertical: 0.01),
+    ColorScheme esquemaDeCores = Theme.of(context).colorScheme;
+    return Column(
+      children: [
+       Container(
+      color: esquemaDeCores.background,
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      // margin: const EdgeInsets.symmetric(vertical: 0.01,),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(time!, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w900),),
-          Image.network(escudo!, width: 48, height: 48,),
+          Text(time!, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w900, color: esquemaDeCores.primary),),
+          Image.network(escudo!, width: 50, height: 50,),
         ],
       ),
-    );
+    ),
+    Container(
+      color: esquemaDeCores.tertiary,
+      height: 4,
+      padding: const EdgeInsets.symmetric(horizontal:100 ),
+    ),
+
+    ],);
+
+   
   }
 }
