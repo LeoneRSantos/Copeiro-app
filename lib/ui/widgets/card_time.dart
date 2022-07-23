@@ -12,7 +12,6 @@ class CardTime extends StatelessWidget{
        Container(
       color: esquemaDeCores.background,
       padding: const EdgeInsets.symmetric(vertical: 8),
-      // margin: const EdgeInsets.symmetric(vertical: 0.01,),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -20,16 +19,12 @@ class CardTime extends StatelessWidget{
           Text(time!, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w900, color: esquemaDeCores.primary),),
           Image.network(escudo!, width: 50, height: 50,),
         ],
-      ),
-    ),
+      ),),
     Container(
       color: esquemaDeCores.tertiary,
       height: 4,
       padding: const EdgeInsets.symmetric(horizontal:100 ),
     ),
-
     ],);
-
-   
   }
 }

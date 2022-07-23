@@ -1,6 +1,6 @@
+import 'package:copeiro_app/controllers/tema_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:copeiro_app/controllers/tema_cubit.dart';
 
 class SwitchTelas extends StatelessWidget{
   const SwitchTelas({Key? key}) : super(key: key);
