@@ -91,7 +91,7 @@ class _MyBrasilPageState extends State<MyBrasilPage> with TickerProviderStateMix
             );},),),
           Center(
             child:  FutureBuilder(
-          future: d.getAll(),
+          future: d.getAll(3009),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               var users = snapshot.data as List<PartidaUnica>;
