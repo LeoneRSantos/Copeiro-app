@@ -72,7 +72,7 @@ class _MyBrasilPageState extends State<MyBrasilPage> with TickerProviderStateMix
         children: <Widget>[
           Center(
           child:  FutureBuilder(
-          future: r.getAllTImes(),
+          future: r.getAllTImes(25),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               var users = snapshot.data as List<Data>;

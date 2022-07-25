@@ -72,7 +72,7 @@ class _MyEspanhalPageState extends State<MyEspanhalPage> with TickerProviderStat
         children: <Widget>[
           Center(
           child:  FutureBuilder(
-          future: r.getAllTImes(),
+          future: r.getAllTImes(113),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               var users = snapshot.data as List<Data>;
