@@ -72,7 +72,7 @@ class _MyBrasilPageState extends State<MyBrasilPage> with TickerProviderStateMix
         children: <Widget>[
           Center(
           child:  FutureBuilder(
-          future: r.getAllTImes(),
+          future: r.getAllTImes(25),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               var users = snapshot.data as List<Data>;
@@ -91,7 +91,7 @@ class _MyBrasilPageState extends State<MyBrasilPage> with TickerProviderStateMix
             );},),),
           Center(
             child:  FutureBuilder(
-          future: d.getAll(),
+          future: d.getAll(3009),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               var users = snapshot.data as List<PartidaUnica>;

@@ -105,7 +105,8 @@ class CardUmResultado extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(
-                child: Image.network('${escudoMandante!}'),
+                child: Image.network('${escudoMandante!}',
+                errorBuilder: (context, exception, stackTrack) => Icon(Icons.error,),),
                 width: 45.0,
                 height: 45.0,
               ),
@@ -126,7 +127,8 @@ class CardUmResultado extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(
-                child: Image.network('${escudoVisitante!}'),
+                child:  Image.network('${escudoVisitante!}',
+                errorBuilder: (context, exception, stackTrack) => Icon(Icons.error,),),
                 width: 45.0,
                 height: 45.0,
               ),
