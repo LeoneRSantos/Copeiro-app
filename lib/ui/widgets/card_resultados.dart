@@ -62,7 +62,7 @@ class CardResultados extends StatelessWidget {
                   },
                   itemCount: nomesDosMandantes.length,
                   separatorBuilder: (BuildContext context, int index) =>
-                      Divider(color: cores.onBackground),
+                      Divider(color: cores.tertiary),
                 ),
               ),
             ),
@@ -105,9 +105,10 @@ class CardUmResultado extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(
-                child: Image.network('${escudoMandante!}'),
-                width: 50.0,
-                height: 50.0,
+                child: Image.network('${escudoMandante!}',
+                errorBuilder: (context, exception, stackTrack) => Icon(Icons.error,),),
+                width: 45.0,
+                height: 45.0,
               ),
               Text(
                 nomeMandante!,
@@ -126,9 +127,10 @@ class CardUmResultado extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(
-                child: Image.network('${escudoVisitante!}'),
-                width: 50.0,
-                height: 50.0,
+                child:  Image.network('${escudoVisitante!}',
+                errorBuilder: (context, exception, stackTrack) => Icon(Icons.error,),),
+                width: 45.0,
+                height: 45.0,
               ),
               Text(
                 nomeVisitante!,
@@ -141,6 +143,12 @@ class CardUmResultado extends StatelessWidget {
               ),
             ],
           ),
+          Container(
+      color: cores.tertiary,
+      height: 4,
+      padding: const EdgeInsets.symmetric(horizontal:100 ),
+      margin: const EdgeInsets.only(top: 10),
+    ),
 
           // Divider(color: Theme.of(context).colorScheme.onBackground,),
         ],
