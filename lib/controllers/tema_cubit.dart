@@ -1,5 +1,4 @@
 import 'package:copeiro_app/models/theme.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
