@@ -49,6 +49,7 @@ class _MyBrasilPageState extends State<MyBrasilPage> with TickerProviderStateMix
     return Scaffold(
       backgroundColor: esquemaDeCores.background,
       appBar:  AppBar(
+        automaticallyImplyLeading: false,
         title: 
           TextTile(liga: 'Brasil'),
           bottom: TabBar(
