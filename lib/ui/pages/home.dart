@@ -77,6 +77,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           GestureDetector(
             onTap:() {
+               Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyBrasilPage()),);
+              debugPrint('Brasileirão');
             },
             child: Container(
               child: Column(
