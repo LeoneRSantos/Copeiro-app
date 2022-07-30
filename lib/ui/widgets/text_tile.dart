@@ -12,7 +12,10 @@ class TextTile extends StatelessWidget{
       margin: const EdgeInsets.only(top: 20,),
       child: Row(
       children: [
-        Icon(Icons.arrow_back_ios_new, size: 30, color: esquemaDeCores.primary,),
+        IconButton(
+          icon: Icon(Icons.arrow_back_ios_new, size: 30, color: esquemaDeCores.primary,),
+          onPressed: () => Navigator.of(context).pop(),
+        ), 
         SizedBox(width: 10,),
         Text(liga, style: TextStyle(fontSize: 35, color: esquemaDeCores.primary),),
       ],
