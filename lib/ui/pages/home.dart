@@ -62,6 +62,8 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
           GestureDetector(
             onTap:() {
+              // TODO: Aqui, será colocada a navegação para a página de informações, quando ela estiver pronta.
+              debugPrint('Info');
             },
             child: Container(
               child: Column(
