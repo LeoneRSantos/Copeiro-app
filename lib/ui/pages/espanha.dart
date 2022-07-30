@@ -49,6 +49,7 @@ class _MyEspanhalPageState extends State<MyEspanhalPage> with TickerProviderStat
     return Scaffold(
       backgroundColor: esquemaDeCores.background,
       appBar:  AppBar(
+        automaticallyImplyLeading: false,
         title: 
           TextTile(liga: 'Espanha'),
           bottom: TabBar(
