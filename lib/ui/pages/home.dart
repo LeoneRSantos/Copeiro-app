@@ -49,6 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar:  AppBar(
         backgroundColor: esquemaDeCores.background,
+        elevation: 0,
         actions: const [
          SwitchTelas(),
         ],),
