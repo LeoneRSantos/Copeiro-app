@@ -10,7 +10,7 @@ class TextPadrao extends StatelessWidget{
     return Text(name, 
         style: TextStyle(
         fontFamily: 'TekoRegular',
-        fontSize: 23,
+        fontSize: 20,
         color: esquemaDeCores.primary,
         fontWeight: FontWeight.w700),);
   }
