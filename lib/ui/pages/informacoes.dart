@@ -46,7 +46,7 @@ class _InformacoesState extends State<Informacoes>
                       width: 30.0,
                       height: 30.0,
                     ),
-                    Text('Brasileirão'),
+                    TextTitleInfos(name:'Brasileirão'),
                   ],
                 ),
               ),
