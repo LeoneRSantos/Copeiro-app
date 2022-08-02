@@ -1,3 +1,5 @@
+import 'package:copeiro_app/models/text/text_infos.dart';
+import 'package:copeiro_app/models/text/text_title_infos.dart';
 import 'package:flutter/material.dart';
 
 class Conquistas extends StatelessWidget {
