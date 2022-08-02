@@ -106,7 +106,7 @@ class CardUmResultado extends StatelessWidget {
             children: [
               SizedBox(
                 child: Image.network('${escudoMandante!}',
-                errorBuilder: (context, exception, stackTrack) => Icon(Icons.error,),),
+                errorBuilder: (context, exception, stackTrack) => Icon(Icons.shield, size: 35.0,),),
                 width: 45.0,
                 height: 45.0,
               ),
@@ -128,7 +128,7 @@ class CardUmResultado extends StatelessWidget {
             children: [
               SizedBox(
                 child:  Image.network('${escudoVisitante!}',
-                errorBuilder: (context, exception, stackTrack) => Icon(Icons.error,),),
+                errorBuilder: (context, exception, stackTrack) => Icon(Icons.shield, size: 35.0,),),
                 width: 45.0,
                 height: 45.0,
               ),
