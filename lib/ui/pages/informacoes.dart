@@ -74,7 +74,7 @@ class _InformacoesState extends State<Informacoes>
 
             children: [
               Conquistas(
-                  pais: 'Brasil',
+                  pais: '   Brasil',
                   copa: '5 Títulos da Copa do Mundo de Futebol',
                   copaContinental: '9 Títulos de Copa América',
                   copaDasConfederacoes: '4 Títulos de Copa das Confederações',
