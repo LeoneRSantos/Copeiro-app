@@ -35,12 +35,12 @@ class Conquistas extends StatelessWidget {
         Center(
           child: Column( 
             children: [ 
-            Text(copa),
-            Text(copaContinental),
-            Text(copaDasConfederacoes),
-            Text(olimpiadas),
-            Text(copaDoMundoFeminina),
-          ],
+              TextInfos(name: copa),
+              TextInfos(name: copaContinental),
+              TextInfos(name: copaDasConfederacoes),
+              TextInfos(name: olimpiadas),
+              TextInfos(name: copaDoMundoFeminina),
+            ],
         ),
       ],
     );
