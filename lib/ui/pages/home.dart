@@ -1,5 +1,3 @@
-// ignore: import_of_legacy_library_into_null_safe
-import 'dart:math';
 import 'package:copeiro_app/controllers/tema_cubit.dart';
 import 'package:copeiro_app/models/text/text_padrao.dart';
 import 'package:copeiro_app/ui/pages/brasil.dart';
@@ -41,7 +39,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     ColorScheme esquemaDeCores = Theme.of(context).colorScheme;
     return Scaffold(
-      appBar:  AppBar(
       backgroundColor: esquemaDeCores.background,
       appBar:  AppBar(
         elevation: 0,
