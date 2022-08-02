@@ -43,8 +43,8 @@ class _InformacoesState extends State<Informacoes>
                   children: [
                     Image.asset(
                       'assets/images/logo-brasileirao.png',
-                      width: 30.0,
-                      height: 30.0,
+                      width: 20.0,
+                      height: 20.0,
                     ),
                     TextTitleInfos(name:'Brasileirão'),
                   ],
