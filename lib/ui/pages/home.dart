@@ -4,6 +4,7 @@ import 'package:copeiro_app/controllers/tema_cubit.dart';
 import 'package:copeiro_app/models/text/text_padrao.dart';
 import 'package:copeiro_app/ui/pages/brasil.dart';
 import 'package:copeiro_app/ui/pages/espanha.dart';
+import 'package:copeiro_app/ui/pages/informacoes.dart';
 import 'package:copeiro_app/ui/widgets/switch_telas.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
