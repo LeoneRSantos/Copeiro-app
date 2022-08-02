@@ -103,11 +103,11 @@ class _InformacoesState extends State<Informacoes>
           Column(
             children: [
               Conquistas(
-                  pais: 'Brasil',
-                  copa: '5 Títulos da Copa do Mundo de Futebol',
-                  copaContinental: '9 Títulos de Copa América',
-                  copaDasConfederacoes: '4 Títulos de Copa das Confederações',
-                  olimpiadas: '2 Medalhas de Ouro Olímpicas',
+                  pais: '   Espanha',
+                  copa: '1 Título da Copa do Mundo de Futebol',
+                  copaContinental: '3 Títulos de Eurocopa',
+                  copaDasConfederacoes: 'Nenhum Título de Copa das Confederações',
+                  olimpiadas: '1 Medalha de Ouro Olímpicas',
                   copaDoMundoFeminina: 'Nenhuma Copa do Mundo Feminina',
                   imagem: 'assets/images/info.png'),
               Container(
