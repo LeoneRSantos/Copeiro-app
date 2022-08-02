@@ -120,7 +120,7 @@ class _InformacoesState extends State<Informacoes>
                   titulo: 'Informações da La Liga',
                   organizacao: 'Organização - LFP',
                   edicoes:
-                      'EDIÇÕES (10 EM MATA-MATA, 36 EM SISTEMA MISTO E 19 NA MODALIDADE DE PONTOS CORRIDOS)',
+                      'Número de Edições - 90 Edições',
                   numeroDeEquipes: 'Número de equipes - 20 equipes',
                   sistema: 'Sistema - pontos corridos',
                   divisoes: 'DIVISÕES: SÉRIES A - SÉRIE B - SÉRIE C - SÉRIE D',
