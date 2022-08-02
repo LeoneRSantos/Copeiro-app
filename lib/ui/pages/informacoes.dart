@@ -54,9 +54,9 @@ class _InformacoesState extends State<Informacoes>
                 child: Column(
                   children: [
                     Image.asset(
-                      'assets/images/logo-brasileirao.png',
-                      width: 30.0,
-                      height: 30.0,
+                      'assets/images/laliga.png',
+                      width: 20.0,
+                      height: 20.0,
                     ),
                     TextTitleInfos(name: 'La Liga'),
                   ],
