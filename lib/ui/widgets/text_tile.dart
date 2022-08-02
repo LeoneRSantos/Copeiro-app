@@ -17,7 +17,7 @@ class TextTile extends StatelessWidget{
           onPressed: () => Navigator.of(context).pop(),
         ), 
         SizedBox(width: 10,),
-        Text(liga, style: TextStyle(fontSize: 35, color: esquemaDeCores.primary),),
+        Text(liga, style: TextStyle(fontSize: 35, fontFamily: 'TekoRegular', color: esquemaDeCores.primary),),
       ],
     ),
     );
