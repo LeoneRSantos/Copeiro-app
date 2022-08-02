@@ -41,7 +41,7 @@ class Conquistas extends StatelessWidget {
               TextInfos(name: olimpiadas),
               TextInfos(name: copaDoMundoFeminina),
             ],
-        ),
+          ),
       ],
     );
   }
