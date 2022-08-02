@@ -26,18 +26,19 @@ class InformacoesLiga extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(titulo),
-        Text(organizacao),
-        Text(edicoes),
-        Text(numeroDeEquipes),
-        Text(sistema),
-        Text(divisoes),
-        Text(primeiroCampeao),
-        Text(ultimoCampeao),
-        Text(maiorCampeao),
-      ],
+    return Center(
+      child: Column(
+        children: [
+          TextInfos(name: titulo),
+          TextInfos(name: organizacao),
+          TextInfos(name: edicoes),
+          TextInfos(name: numeroDeEquipes),
+          TextInfos(name: sistema),
+          TextInfos(name: divisoes),
+          TextInfos(name: primeiroCampeao),
+          TextInfos(name: ultimoCampeao),
+          TextInfos(name: maiorCampeao),
+        ],
     );
   }
 }
