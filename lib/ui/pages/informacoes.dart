@@ -94,10 +94,10 @@ class _InformacoesState extends State<Informacoes>
                       'Número de Edições - 63 Edições',
                   numeroDeEquipes: 'Número de equipes - 20 equipes',
                   sistema: 'Sistema - pontos corridos',
-                  divisoes: 'DIVISÕES: SÉRIES A - SÉRIE B - SÉRIE C - SÉRIE D',
-                  primeiroCampeao: 'PRIMEIRO CAMPEÃO - BAHIA EC (1959)',
-                  ultimoCampeao: 'ÚLTIMO CAMPEÃO - C ATLÉTICO MINEIRO (2021)',
-                  maiorCampeao: 'MAIOR CAMPEÃO - SE PALMEIRAS (10 TÍTULOS)')
+                  divisoes: 'Divisões: Série A - Série B - Série C - Série D',
+                  primeiroCampeao: 'Primeiro Campeão - Bahia EC (1959)',
+                  ultimoCampeao: 'Último Campeão - C Atlético Mineiro (2021)',
+                  maiorCampeao: 'Maior Campeão - SE Palmeiras (10 TÍTULOS)')
             ],
           ),
           Column(
