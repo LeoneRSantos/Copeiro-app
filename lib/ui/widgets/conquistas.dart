@@ -32,8 +32,9 @@ class Conquistas extends StatelessWidget {
             TextTitleInfos(name: pais), 
           ],
         ), 
-        Column( 
-          children: [ 
+        Center(
+          child: Column( 
+            children: [ 
             Text(copa),
             Text(copaContinental),
             Text(copaDasConfederacoes),
