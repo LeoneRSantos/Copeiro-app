@@ -42,7 +42,8 @@ class _MyHomePageState extends State<MyHomePage> {
     ColorScheme esquemaDeCores = Theme.of(context).colorScheme;
     return Scaffold(
       appBar:  AppBar(
-        backgroundColor: esquemaDeCores.background,
+      backgroundColor: esquemaDeCores.background,
+      appBar:  AppBar(
         elevation: 0,
         actions: const [
          SwitchTelas(),
