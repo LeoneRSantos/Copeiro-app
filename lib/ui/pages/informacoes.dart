@@ -109,7 +109,7 @@ class _InformacoesState extends State<Informacoes>
                   copaDasConfederacoes: 'Nenhum Título de Copa das Confederações',
                   olimpiadas: '1 Medalha de Ouro Olímpicas',
                   copaDoMundoFeminina: 'Nenhuma Copa do Mundo Feminina',
-                  imagem: 'assets/images/info.png'),
+                  imagem: 'assets/images/espanha.png'),
               Container(
                 color: Theme.of(context).colorScheme.tertiary,
                 height: 4,
