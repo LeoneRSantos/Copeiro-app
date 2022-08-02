@@ -28,8 +28,8 @@ class Conquistas extends StatelessWidget {
       children: [ 
         Row( 
           children: [ 
-            Image.asset(imagem, width: 40.0, height: 40.0,), 
-            Text(pais), 
+            Image.asset(imagem, width: 70.0, height: 70.0,), 
+            TextTitleInfos(name: pais), 
           ],
         ), 
         Column( 
