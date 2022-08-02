@@ -2,7 +2,8 @@ import 'package:copeiro_app/ui/widgets/conquistas.dart';
 import 'package:copeiro_app/ui/widgets/informacoes_liga.dart';
 import 'package:copeiro_app/ui/widgets/switch_telas.dart';
 import 'package:flutter/material.dart';
-
+import 'package:copeiro_app/models/text/text_infos.dart';
+import 'package:copeiro_app/models/text/text_title_infos.dart';
 import '../widgets/text_tile.dart';
 
 class Informacoes extends StatefulWidget {
