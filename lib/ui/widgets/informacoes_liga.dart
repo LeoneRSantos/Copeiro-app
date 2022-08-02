@@ -39,6 +39,7 @@ class InformacoesLiga extends StatelessWidget {
           TextInfos(name: ultimoCampeao),
           TextInfos(name: maiorCampeao),
         ],
+      ),
     );
   }
 }
