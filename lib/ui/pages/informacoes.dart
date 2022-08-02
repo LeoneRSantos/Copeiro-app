@@ -117,8 +117,8 @@ class _InformacoesState extends State<Informacoes>
                 margin: const EdgeInsets.only(top: 10, bottom: 10.0),
               ),
               InformacoesLiga(
-                  titulo: 'Informações do Brasileirão',
-                  organizacao: 'Organização - CBF',
+                  titulo: 'Informações da La Liga',
+                  organizacao: 'Organização - LFP',
                   edicoes:
                       'EDIÇÕES (10 EM MATA-MATA, 36 EM SISTEMA MISTO E 19 NA MODALIDADE DE PONTOS CORRIDOS)',
                   numeroDeEquipes: 'Número de equipes - 20 equipes',
