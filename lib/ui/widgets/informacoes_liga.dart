@@ -1,3 +1,4 @@
+import 'package:copeiro_app/models/text/text_infos.dart';
 import 'package:flutter/material.dart';
 
 class InformacoesLiga extends StatelessWidget {
