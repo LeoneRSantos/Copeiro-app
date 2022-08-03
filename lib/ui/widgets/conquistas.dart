@@ -29,7 +29,7 @@ class Conquistas extends StatelessWidget {
         Row( 
           children: [ 
             Image.asset(imagem, width: 70.0, height: 70.0,), 
-            TextTitleInfos(name: pais), 
+            TextPais(name: pais), 
           ],
         ), 
         Center(
