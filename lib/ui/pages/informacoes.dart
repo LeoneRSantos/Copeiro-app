@@ -70,7 +70,7 @@ class _InformacoesState extends State<Informacoes>
         controller: _tabController,
         children: [
           Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
             // TODO O que temos que fazer pro texto ficar no começo?
 
             children: [
