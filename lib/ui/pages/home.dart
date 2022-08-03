@@ -45,12 +45,8 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: const [
          SwitchTelas(),
         ],),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 110.0),
-            child: Center(child: Image.asset('assets/images/logoCopeiro.png', width: 400, height: 400,)
+       body: 
+             Center(child: Image.asset('assets/images/logoCopeiro.png', width: 400, height: 400,)
             ),
           ),
         Padding(
