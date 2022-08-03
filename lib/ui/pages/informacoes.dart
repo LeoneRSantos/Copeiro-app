@@ -98,7 +98,14 @@ class _InformacoesState extends State<Informacoes>
                   divisoes: 'Divisões: Série A - Série B - Série C - Série D',
                   primeiroCampeao: 'Primeiro Campeão - Bahia EC (1959)',
                   ultimoCampeao: 'Último Campeão - C Atlético Mineiro (2021)',
-                  maiorCampeao: 'Maior Campeão - SE Palmeiras (10 TÍTULOS)')
+                  maiorCampeao: 'Maior Campeão - SE Palmeiras (10 TÍTULOS)'
+              ),
+              Container(
+                color: Theme.of(context).colorScheme.tertiary,
+                height: 4,
+                padding: const EdgeInsets.symmetric(horizontal: 100),
+                margin: const EdgeInsets.only(top: 10, bottom: 10.0),
+              ),
             ],
           ),
           Column(
