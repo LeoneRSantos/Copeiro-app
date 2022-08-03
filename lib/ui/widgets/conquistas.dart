@@ -1,3 +1,5 @@
+import 'package:copeiro_app/models/text/text_infos.dart';
+import 'package:copeiro_app/models/text/text_pais.dart';
 import 'package:flutter/material.dart';
 
 class Conquistas extends StatelessWidget {
@@ -21,21 +23,25 @@ class Conquistas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column( 
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [ 
         Row( 
           children: [ 
-            Image.asset(imagem, width: 40.0, height: 40.0,), 
-            Text(pais), 
+            Image.asset(imagem, width: 70.0, height: 70.0,), 
+            TextPais(name: pais), 
           ],
         ), 
-        Column( 
-          children: [ 
-            Text(copa),
-            Text(copaContinental),
-            Text(copaDasConfederacoes),
-            Text(olimpiadas),
-            Text(copaDoMundoFeminina),
-          ],
+        Center(
+          child: Column( 
+            children: [ 
+              TextInfos(name: copa),
+              TextInfos(name: copaContinental),
+              TextInfos(name: copaDasConfederacoes),
+              TextInfos(name: olimpiadas),
+              TextInfos(name: copaDoMundoFeminina),
+            ],
+          ),
         ),
       ],
     );

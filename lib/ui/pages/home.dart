@@ -19,7 +19,7 @@ class Home extends StatelessWidget {
     return MaterialApp(
       title: 'Copeiro',
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(),
+      home: const Home(),
       theme: state,
     );
     },), );
@@ -45,16 +45,15 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: const [
          SwitchTelas(),
         ],),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 110.0),
-            child: Center(child: Image.asset('assets/images/logoCopeiro.png', width: 400, height: 400,)
+       body: 
+             Center(child: Image.asset('assets/images/logoCopeiro.png', width: 400, height: 400,)
             ),
-          ),
-        Padding(
-          padding: const EdgeInsets.only(top: 90.0),
+
+       bottomNavigationBar: BottomAppBar(
+        color: esquemaDeCores.background,
+        elevation: 0,
+        child: SizedBox(
+          height: 80,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -99,6 +98,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
         ),
-    ]));
+    ));
   }
 }
