@@ -81,7 +81,7 @@ class _InformacoesState extends State<Informacoes>
                   copaDasConfederacoes: '4 Títulos de Copa das Confederações',
                   olimpiadas: '2 Medalhas de Ouro Olímpicas',
                   copaDoMundoFeminina: 'Nenhuma Copa do Mundo Feminina',
-                  imagem: 'assets/images/info.png'),
+                  imagem: 'assets/images/brasil.png'),
               Container(
                 color: Theme.of(context).colorScheme.tertiary,
                 height: 4,
