@@ -19,7 +19,7 @@ class Home extends StatelessWidget {
     return MaterialApp(
       title: 'Copeiro',
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(),
+      home: const Home(),
       theme: state,
     );
     },), );
