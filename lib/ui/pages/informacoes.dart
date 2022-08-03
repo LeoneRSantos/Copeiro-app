@@ -85,6 +85,7 @@ class _InformacoesState extends State<Informacoes>
               Container(
                 color: Theme.of(context).colorScheme.tertiary,
                 height: 4,
+                width: 330,
                 padding: const EdgeInsets.symmetric(horizontal: 100),
                 margin: const EdgeInsets.only(top: 10, bottom: 10.0),
               ),
