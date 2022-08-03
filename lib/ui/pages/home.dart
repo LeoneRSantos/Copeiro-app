@@ -48,9 +48,12 @@ class _MyHomePageState extends State<MyHomePage> {
        body: 
              Center(child: Image.asset('assets/images/logoCopeiro.png', width: 400, height: 400,)
             ),
-          ),
-        Padding(
-          padding: const EdgeInsets.only(top: 90.0),
+
+       bottomNavigationBar: BottomAppBar(
+        color: esquemaDeCores.background,
+        elevation: 0,
+        child: SizedBox(
+          height: 80,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
