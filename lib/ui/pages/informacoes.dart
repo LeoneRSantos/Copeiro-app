@@ -134,7 +134,15 @@ class _InformacoesState extends State<Informacoes>
                   divisoes: 'Divisões: La Liga - II División - II División B - III División',
                   primeiroCampeao: 'Primeiro Campeão - FC Barcelona (1928/29)',
                   ultimoCampeao: 'Último Campeão - Real Madrid (2021/22)',
-                  maiorCampeao: 'Maior Campeão - Real Madrid (35 TÍTULOS)'),
+                  maiorCampeao: 'Maior Campeão - Real Madrid (35 TÍTULOS)'
+              ),
+              Container(
+                color: Theme.of(context).colorScheme.tertiary,
+                height: 4,
+                padding: const EdgeInsets.symmetric(horizontal: 100),
+                margin: const EdgeInsets.only(top: 10, bottom: 10.0),
+              ),
+
             ],
           ),
         ],
