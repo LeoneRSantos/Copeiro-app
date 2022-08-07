@@ -14,14 +14,17 @@ class Espanha extends StatelessWidget {
   const Espanha({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<TemaCubit>(create: (_) => TemaCubit(),
-    child: BlocBuilder<TemaCubit, ThemeData>(builder: (context, state) {
-
-    return MaterialApp(
-      home:  MyEspanhalPage(),
-      theme: state,
+    return BlocProvider<TemaCubit>(
+      create: (_) => TemaCubit(),
+      child: BlocBuilder<TemaCubit, ThemeData>(
+        builder: (context, state) {
+          return MaterialApp(
+            home: MyEspanhalPage(),
+            theme: state,
+          );
+        },
+      ),
     );
-    },), );
   }
 }
 
@@ -29,10 +32,11 @@ class MyEspanhalPage extends StatefulWidget {
   const MyEspanhalPage({Key? key}) : super(key: key);
 
   @override
-  State<MyEspanhalPage> createState() => _MyEspanhalPageState ();
+  State<MyEspanhalPage> createState() => _MyEspanhalPageState();
 }
 
-class _MyEspanhalPageState extends State<MyEspanhalPage> with TickerProviderStateMixin {
+class _MyEspanhalPageState extends State<MyEspanhalPage>
+    with TickerProviderStateMixin {
   late TabController _tabController;
 
   @override
@@ -48,11 +52,10 @@ class _MyEspanhalPageState extends State<MyEspanhalPage> with TickerProviderStat
     RepositorioListaDePartida d = RepositorioListaDePartida();
     return Scaffold(
       backgroundColor: esquemaDeCores.background,
-      appBar:  AppBar(
+      appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: 
-          TextTile(liga: 'Espanha'),
-          bottom: TabBar(
+        title: TextTile(liga: 'Espanha'),
+        bottom: TabBar(
           controller: _tabController,
           indicatorColor: esquemaDeCores.onSurface,
           tabs: const <Widget>[
@@ -63,55 +66,80 @@ class _MyEspanhalPageState extends State<MyEspanhalPage> with TickerProviderStat
             Tab(
               icon: Icon(Icons.data_thresholding_outlined),
               text: 'Resultados',
-            ),],),
+            ),
+          ],
+        ),
         actions: const [
-         SwitchTelas(),
-        ],),
+          SwitchTelas(),
+        ],
+      ),
       body: SafeArea(
         child: TabBarView(
-        controller: _tabController,
-        children: <Widget>[
-          Center(
-          child:  FutureBuilder(
-          future: r.getAllTImes(113),
-          builder: (context, snapshot) {
-            if (snapshot.hasData) {
-              var users = snapshot.data as List<Data>;
+          controller: _tabController,
+          children: <Widget>[
+            Center(
+              child: FutureBuilder(
+                future: r.getAllTImes(113),
+                builder: (context, snapshot) {
+                  if (snapshot.hasData) {
+                    var users = snapshot.data as List<Data>;
 
-              return ListView.builder(
-                itemCount: users.length,
-                itemBuilder: (_, index) {
-                  Data fato = users[index];
-                  return ListTile(
-                    // leading: const Icon(Icons.adb),
-                    title: CardTime( escudo: '${fato.logo}', time: '${fato.name}',),);
-                },);}
-            return const Center(
-              child: CircularProgressIndicator(
-                color: Colors.red,),
-            );},),),
-          Center(
-            child:  FutureBuilder(
-          future: d.getAll(2029),
-          builder: (context, snapshot) {
-            if (snapshot.hasData) {
-              var users = snapshot.data as List<PartidaUnica>;
+                    return ListView.builder(
+                      itemCount: users.length,
+                      itemBuilder: (_, index) {
+                        Data fato = users[index];
+                        return ListTile(
+                          // leading: const Icon(Icons.adb),
+                          title: CardTime(
+                            escudo: '${fato.logo}',
+                            time: '${fato.name}',
+                          ),
+                        );
+                      },
+                    );
+                  }
+                  return const Center(
+                    child: CircularProgressIndicator(
+                      color: Colors.red,
+                    ),
+                  );
+                },
+              ),
+            ),
+            Center(
+              child: FutureBuilder(
+                future: d.getAll(2029),
+                builder: (context, snapshot) {
+                  if (snapshot.hasData) {
+                    var users = snapshot.data as List<PartidaUnica>;
 
-              return ListView.builder(
-                itemCount: users.length,
-                itemBuilder: (_, index) {
-                  PartidaUnica fato = users[index];
-                  return ListTile(
-                    title: CardUmResultado( escudoMandante: fato.homeTeam?.logo,
-                          nomeMandante: fato.homeTeam?.name, golsMandante: fato.stats?.homeScore, 
-                          escudoVisitante: fato.awayTeam?.logo, nomeVisitante: 
-                          fato.awayTeam?.name, golsVisitante: fato.stats?.awayScore),
-                  );},);
-            }
-            return const Center(
-              child: CircularProgressIndicator(
-                color: Colors.red,
-              ),);},),),],),),
+                    return ListView.builder(
+                      itemCount: users.length,
+                      itemBuilder: (_, index) {
+                        PartidaUnica fato = users[index];
+                        return ListTile(
+                          title: CardUmResultado(
+                              escudoMandante: fato.homeTeam?.logo,
+                              nomeMandante: fato.homeTeam?.name,
+                              golsMandante: fato.stats?.homeScore,
+                              escudoVisitante: fato.awayTeam?.logo,
+                              nomeVisitante: fato.awayTeam?.name,
+                              golsVisitante: fato.stats?.awayScore),
+                        );
+                      },
+                    );
+                  }
+                  return const Center(
+                    child: CircularProgressIndicator(
+                      color: Colors.red,
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

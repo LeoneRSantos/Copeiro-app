@@ -2,7 +2,7 @@ import 'package:copeiro_app/ui/widgets/help_informacoes.dart';
 import 'package:flutter/material.dart';
 
 class Conquistas extends StatelessWidget {
-  Conquistas(
+  const Conquistas(
       {Key? key,
       required this.pais,
       required this.copa,
@@ -35,12 +35,12 @@ class Conquistas extends StatelessWidget {
                 width: 70.0,
                 height: 70.0,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               Text(
                 pais,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,

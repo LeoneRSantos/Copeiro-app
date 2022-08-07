@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class CardUmResultado extends StatelessWidget {
   CardUmResultado(
       {Key? key,

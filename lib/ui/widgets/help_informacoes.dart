@@ -7,4 +7,6 @@ const TextInformacoes = TextStyle(
   color: Colors.white,
 );
 
-const HelpSpace = SizedBox(height: 9,);
+const HelpSpace = SizedBox(
+  height: 9,
+);
