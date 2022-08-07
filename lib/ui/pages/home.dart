@@ -1,5 +1,5 @@
 import 'package:copeiro_app/controllers/tema_cubit.dart';
-import 'package:copeiro_app/models/text/text_padrao.dart';
+import 'package:copeiro_app/ui/widgets/text_padrao.dart';
 import 'package:copeiro_app/ui/pages/brasil.dart';
 import 'package:copeiro_app/ui/pages/espanha.dart';
 import 'package:copeiro_app/ui/pages/informacoes.dart';

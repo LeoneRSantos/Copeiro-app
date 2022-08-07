@@ -1,4 +1,4 @@
-import 'package:copeiro_app/models/text/text_infos.dart';
+import 'package:copeiro_app/ui/widgets/help_informacoes.dart';
 import 'package:flutter/material.dart';
 
 class InformacoesLiga extends StatelessWidget {
@@ -30,15 +30,56 @@ class InformacoesLiga extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          TextInfos(name: titulo),
-          TextInfos(name: organizacao),
-          TextInfos(name: edicoes),
-          TextInfos(name: numeroDeEquipes),
-          TextInfos(name: sistema),
-          TextInfos(name: divisoes),
-          TextInfos(name: primeiroCampeao),
-          TextInfos(name: ultimoCampeao),
-          TextInfos(name: maiorCampeao),
+           Text(
+            "Informações ${titulo}",
+            style: const TextStyle(
+              height: 1.15,
+              fontFamily: "TekoRegular",
+              fontSize: 30,
+              color: Colors.white,
+            ),
+          ),
+          HelpSpace,
+          HelpSpace,
+          Text(
+            "Organização - ${organizacao}",
+            style: TextInformacoes,
+          ),
+          HelpSpace,
+          Text(
+            "Número de Edições - ${edicoes}",
+            style: TextInformacoes,
+          ),
+          HelpSpace,
+          Text(
+            "Número de equipes - ${numeroDeEquipes}",
+            style: TextInformacoes,
+          ),
+          HelpSpace,
+          Text(
+            "Sistema - ${sistema}",
+            style: TextInformacoes,
+          ),
+          HelpSpace,
+          Text(
+            "Divisões: ${divisoes}",
+            style: TextInformacoes,
+          ),
+          HelpSpace,
+          Text(
+            "Primeiro Campeão - ${primeiroCampeao}",
+            style: TextInformacoes,
+          ),
+          HelpSpace,
+          Text(
+            "Último Campeão - ${ultimoCampeao}",
+            style: TextInformacoes,
+          ),
+          HelpSpace,
+          Text(
+            "Maior Campeão - ${maiorCampeao}",
+            style: TextInformacoes,
+          ),
         ],
       ),
     );
