@@ -1,11 +1,6 @@
 import 'package:dio/dio.dart';
-
 import '../excecoes/excecoes.dart';
 import '../modelos/modelo_tabela.dart';
-
-
-
-
 
 abstract class Repositorio<T> {
   Future<List<T>?> getTabela();
@@ -25,7 +20,6 @@ class RepositorioTabelaBrasileirao extends Repositorio<Standings> {
     } on DioError catch (error) {
       throw DataException.fromDioError(error);
     }
-
     return Data(
       standings: [Standings(status: 'fedf')],
     ).standings!;
