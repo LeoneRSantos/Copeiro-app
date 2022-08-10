@@ -29,62 +29,60 @@ class InformacoesLiga extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-      child: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-             Text(
-              "Informações ${titulo}",
-              style: const TextStyle(
-                height: 1.15,
-                fontFamily: "TekoRegular",
-                fontSize: 30,
-                color: Colors.white,
-              ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+           Text(
+            "Informações ${titulo}",
+            style: const TextStyle(
+              height: 1.15,
+              fontFamily: "TekoRegular",
+              fontSize: 30,
+              color: Colors.white,
             ),
-            HelpSpace,
-            HelpSpace,
-            Text(
-              "Organização - ${organizacao}",
-              style: TextInformacoes,
-            ),
-            HelpSpace,
-            Text(
-              "Número de Edições - ${edicoes}",
-              style: TextInformacoes,
-            ),
-            HelpSpace,
-            Text(
-              "Número de equipes - ${numeroDeEquipes}",
-              style: TextInformacoes,
-            ),
-            HelpSpace,
-            Text(
-              "Sistema - ${sistema}",
-              style: TextInformacoes,
-            ),
-            HelpSpace,
-            Text(
-              "Divisões: ${divisoes}",
-              style: TextInformacoes,
-            ),
-            HelpSpace,
-            Text(
-              "Primeiro Campeão - ${primeiroCampeao}",
-              style: TextInformacoes,
-            ),
-            HelpSpace,
-            Text(
-              "Último Campeão - ${ultimoCampeao}",
-              style: TextInformacoes,
-            ),
-            HelpSpace,
-            Text(
-              "Maior Campeão - ${maiorCampeao}",
-              style: TextInformacoes,
-            ),
-          ],
-        ),
+          ),
+          HelpSpace,
+          HelpSpace,
+          Text(
+            "Organização - ${organizacao}",
+            style: TextInformacoes,
+          ),
+          HelpSpace,
+          Text(
+            "Número de Edições - ${edicoes}",
+            style: TextInformacoes,
+          ),
+          HelpSpace,
+          Text(
+            "Número de equipes - ${numeroDeEquipes}",
+            style: TextInformacoes,
+          ),
+          HelpSpace,
+          Text(
+            "Sistema - ${sistema}",
+            style: TextInformacoes,
+          ),
+          HelpSpace,
+          Text(
+            "Divisões: ${divisoes}",
+            style: TextInformacoes,
+          ),
+          HelpSpace,
+          Text(
+            "Primeiro Campeão - ${primeiroCampeao}",
+            style: TextInformacoes,
+          ),
+          HelpSpace,
+          Text(
+            "Último Campeão - ${ultimoCampeao}",
+            style: TextInformacoes,
+          ),
+          HelpSpace,
+          Text(
+            "Maior Campeão - ${maiorCampeao}",
+            style: TextInformacoes,
+          ),
+        ],
       ),
     );
   }
