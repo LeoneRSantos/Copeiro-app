@@ -29,7 +29,6 @@ class InformacoesLiga extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-      child: Center(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -84,7 +83,6 @@ class InformacoesLiga extends StatelessWidget {
             style: TextInformacoes,
           ),
         ],
-        ),
       ),
     );
   }
