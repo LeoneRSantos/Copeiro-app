@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
           color: esquemaDeCores.background,
           elevation: 0,
           child: SizedBox(
-            height: 80,
+            height: 85,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
