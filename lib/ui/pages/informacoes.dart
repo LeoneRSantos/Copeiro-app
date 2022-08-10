@@ -134,6 +134,7 @@ class _TelaDeInformacoesState extends State<TelaDeInformacoes>
             ],
           ),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Conquistas(
                   pais: 'Espanha',
